@@ -3,6 +3,7 @@ package com.yoshiki.hishikawa.bodyrecordingapplication
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.preference.PreferenceManager
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
 
@@ -48,5 +49,7 @@ class MainActivity : AppCompatActivity() {
                 .putString("WAIST", waist.text.toString())
                 .putString("INSEAM", inseam.text.toString())
                 .apply()
+
+        Toast.makeText(this, "保存しました", Toast.LENGTH_LONG).show();
     }
 }
